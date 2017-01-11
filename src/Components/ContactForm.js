@@ -10,7 +10,8 @@ export default class ContactForm extends Component {
     const endH = isModalOpen ? 60 : 0
     const startW = 0
     const endW = isModalOpen ? 60 : 0
-    const modalParams = {stiffness: 250, damping: 20}
+    const inputW = isModalOpen ? 100 : 0
+    const modalParams = {stiffness: 210, damping: 20}
     return (
       <Motion defaultStyle={ {o: startO, h: startH, w: startW} } style={ {o: spring(endO, modalParams), h: spring(endH, modalParams), w: spring(endW, modalParams)} }>
         {style => {
@@ -19,18 +20,21 @@ export default class ContactForm extends Component {
               <a href="javascript:void(0)" className="close-button" onClick={ this.props.toggleModal }><span className="fa fa-2x fa-times" /></a>
               <div className="contact-form">
                 <p className="contact-header">Drop me a line!</p>
-                <div className="contact-field">
+                <div className="contact-field" style={ {width: `${inputW}%`} }>
                   <span className="fa fa-user contact-icon" />
                   <input className="contact-input" type="text" placeholder="Name" />
                 </div>
-                <div className="contact-field">
+                <div className="contact-field" style={ {width: `${inputW}%`} }>
                   <span className="fa fa-envelope contact-icon" />
                   <input className="contact-input" type="text" placeholder="Email" />
                 </div>
-                <div className="contact-field-textarea">
+                <div className="contact-field-textarea" style={ {width: `${inputW}%`} }>
                   <span className="fa fa-comment contact-icon-textarea" />
                   <textarea className="contact-input-textarea" maxlength="500" type="textarea" placeholder="Message..."/>
                 </div>
+              </div>
+              <div className="submit-container">
+                <button className="submit-button">SUBMIT</button>
               </div>
             </div>
           )

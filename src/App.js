@@ -37,9 +37,10 @@ class App extends Component {
     window.removeEventListener('scroll', this.handleScroll.bind(this))
   }
   toggleModal() {
-    const { isModalOpen } = this.state
+    const { isModalOpen, isSmoothScrolling } = this.state
     this.setState({
-      isModalOpen: !isModalOpen
+      isModalOpen: !isModalOpen,
+      isSmoothScrolling: !isSmoothScrolling
     })
   }
   getDistanceFromTop(element) {
@@ -100,7 +101,7 @@ class App extends Component {
   }
   getEndX() {
     const { currentSection } = this.state
-    return 2.5 + (currentSection * 100)
+    return 9.3 + (currentSection * 100)
   }
   changeSection(sectionId, section) {
     this.setState({
@@ -128,7 +129,7 @@ class App extends Component {
     const nameParams = {stiffness: 150, damping: 25}
     const buttonParams = {stiffness: 75, damping: 18}
     const navParams = {stiffness: 280, damping: 28}
-    const startX = 2.5
+    const startX = 9.3
     const endX = this.getEndX()
     return (
       <div className="App">
@@ -137,11 +138,13 @@ class App extends Component {
           <Motion defaultStyle={ {x: startX} } style={ {x: spring(endX, navParams)} }>
             {style => <div className="nav-border" style={ {left: style.x} } />}
           </Motion>
-          <NavLink number={ 0 } section={ this.splash } onClick={ this.changeSection.bind(this) } text="Home" />
+          <div className="nav-border" style={ {right: 10.5} } />
+          <NavLink styles={ {marginLeft: 12} } number={ 0 } section={ this.splash } onClick={ this.changeSection.bind(this) } text="Home" />
           <NavLink number={ 1 } section={ this.about } onClick={ this.changeSection.bind(this) } text="About" />
           <NavLink number={ 2 } section={ this.resume } onClick={ this.changeSection.bind(this) } text="Resume" />
           <NavLink number={ 3 } section={ this.projects } onClick={ this.changeSection.bind(this) } text="Projects" />
           <NavLink number={ 4 } onClick={ this.changeSection.bind(this) } text="Blog" />
+          <NavLink styles={ {marginLeft: 'auto', marginRight: 12, zIndex: 200} } onClick={ this.toggleModal.bind(this) } text="Contact" />
         </nav>
         <div className="splash" ref={ el => { this.splash = el; } }>
           <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(endY, nameParams), o: spring(endO, nameParams)} }>
