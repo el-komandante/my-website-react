@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+.App {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  /*max-width: 1000px;*/
+  margin: 0 auto;
+}
+.container {
+  max-width: 65%;
+  margin: 0 auto;
+}
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}*/
+
+/*.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}*/
+
+/*.App-intro {
+  font-size: large;
+}*/
+
+/*@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+
+/*NAV*/
+
+nav {
+  display: flex;
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 75px;
+  z-index: 999;
+}
+.nav-link {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  /*border: 2px solid white;*/
+  margin: 5px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-link a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+.nav-link a:visited {
+  text-decoration: none;
+  color: white;
+}
+.nav-border {
+  border: 2px solid white;
+  position: absolute;
+  width: 90px;
+  height: 44px;
+  top: 13.5px;
+}
+
+/*SPLASH*/
+
+h1 {
+  font-size: 5em;
+}
+.splash {
+  background: black;
+  /*background-image: url('./splash-background.jpg');*/
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+}
+.section-title {
+  width: 100%;
+  text-align: left;
+}
+.section-title > h2 {
+  font-size: 3em;
+  margin: 0;
+  /*padding-left: 40px;*/
+  padding-top: 20px;
+  text-align: center;
+}
+.name {
+  color: white;
+  width: 100%;
+  flex-basis: 100%;
+}
+.name > h1 {
+  text-shadow: 0px 0px 10px #464646;
+  margin: 0;
+  /*text-decoration: underline;*/
+}
+.border-button-container {
+  padding: 20px;
+}
+.border-button {
+  width: 70px;
+  height: 40px;
+  color: white;
+  background: transparent;
+  transition: all .2s ease;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 2px solid white;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.5em;
+}
+.border-button:hover {
+  background: white;
+  color: black;
+}
+
+/*ABOUT*/
+
+.about {
+  background: #e4e4e4;
+  /*width: 100%;*/
+  min-height: 60vh;
+  padding: 0px 40px 20px 40px;
+  text-align: center;
+}
+.profile-photo-container {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.profile-photo {
+  border-radius: 50%;
+  max-height: 225px;
+  box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.75);
+}
+/*RESUME*/
+
+.resume {
+  background: white;
+  /*height: 100vh;*/
+  text-align: left;
+  padding: 10px 40px 20px 40px;
+  /*width: 75%;*/
+  margin: 0 auto;
+}
+.resume-section {
+  padding: 10px 0px 10px 0px;
+  /*padding-left: 40px;*/
+}
+.resume-section h3 {
+  margin: 0;
+}
+.resume-section-title h2 {
+  /*padding-left: 40px;*/
+  margin: 0;
+  padding-top: 10px;
+}
+.left-block-title {
+	/*font-size: 1.5rem;*/
+	font-weight: bold;
+}
+.left-block{
+	vertical-align: top;
+	display: inline-block;
+	width: calc(25% - 10px);
+	padding-top: 15px;
+  padding-right: 10px;
+}
+.right-block {
+	vertical-align: top;
+	display: inline-block;
+	padding-top: 15px;
+  width: 75%;
+}
+.details {
+  padding-left: 15px;
+}
+@media screen and (max-width: 600px) {
+  .right-block, .left-block {
+    display: block;
+    width: 100%;
+  }
+}
+.right-block-title {
+	/*font-size: 1.5rem;*/
+	font-weight: 600;
+}
+.skills {
+  width: 100%;
+}
+
+/*PROJECTS*/
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  height: 1000px;
+}
+.project {
+  width: 50%;
+}
+.project-image {
+    position:relative;
+    /*width:200px;
+    height:200px;*/
+}
+.project-image img {
+    width:100%;
+    vertical-align:top;
+}
+.project-image figure {
+  margin: 0px;
+  padding: 20px;
+}
+.project-image:after, .project-image:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+}
+.project-image:after {
+    content:'\A';
+    width: 100%;
+		height: 100%;
+    top: 0;
+		left: 0;
+    background: rgba(0,0,0,0.4);
+}
+.project-image:before {
+    content: attr(data-content);
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    bottom: 50%;
+    padding: 4px 10px;
+    text-align: center;
+    background: none;
+    -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 1.3em;
+}
+.project-image:hover:after, .project-image:hover:before {
+    opacity:1;
+}
+
+/*CONTACT FORM*/
+
+.contact-form-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.75);
+}
+.contact-form {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.contact-icon {
+  background: black;
+  color: white;
+  height: 100%;
+  padding: 0px 3px 0px 3px;
+  height: calc(100% + 4px);
+  line-height: 26px !important;
+  vertical-align: bottom;
+  min-width: 22px;
+}
+.contact-field {
+  height: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-basis: 100%;
+}
+.contact-input {
+  height: 100%;
+  width: 80%;
+  padding: 0px 0px 0px 4px;
+}
+.contact-field-textarea {
+  height: 130px;
+  padding: 10px 0px 10px 0px;
+  flex-basis: 100%;
+}
+.contact-input-textarea {
+  height: 100%;
+  width: 80%;
+  padding-left: 4px;
+  resize: none;
+}
+.contact-icon-textarea {
+  background: black;
+  color: white;
+  height: 100%;
+  padding: 0px 3px 0px 3px;
+  height: calc(100% + 6px);
+  line-height: 130px !important;
+  vertical-align: bottom;
+  min-width: 22px;
+  margin-bottom: 4.5px;
+}
+.close-button {
+  margin-right: 92%;
+  margin-top: .7%;
+  color: black;
+  /*position: fixed;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;*/
+}
+.close-button:visited, .close-button:hover {
+  color: black;
+}
+.contact-header {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 600;
+}
