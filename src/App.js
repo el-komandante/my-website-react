@@ -42,6 +42,7 @@ class App extends Component {
       isModalOpen: !isModalOpen,
       isSmoothScrolling: !isSmoothScrolling
     })
+    document.body.style['overflow-y'] = !isModalOpen ? 'hidden' : 'scroll'
   }
   getDistanceFromTop(element) {
     let distance = 0
@@ -64,7 +65,6 @@ class App extends Component {
         lastScrollPos: window.scrollY
       })
     }
-    console.log(this.state.scrollDirection)
     const { currentSection, isSmoothScrolling, scrollDirection } = this.state
     const sections = [
       {
@@ -89,7 +89,6 @@ class App extends Component {
     let nextSection = sections[currentSection + 1] && sections[currentSection + 1]
     let prevSection = sections[currentSection - 1] && sections[currentSection - 1]
     if (nextSection && scrollDirection === 'down') {
-      // console.log(isSmoothScrolling)
       if (window.scrollY > this.getDistanceFromTop(nextSection.element) - 100 && !isSmoothScrolling) {
         this.changeSection(nextSection.id)
       }
@@ -108,14 +107,14 @@ class App extends Component {
       currentSection: sectionId
     })
     if (section) {
+      const offset = window.innerWidth > 600 ? 75 : 60
       this.setState({
         isSmoothScrolling: true
       },
-      smoothScroll(this.getDistanceFromTop(section) - 75, 500, () => {
+      smoothScroll(this.getDistanceFromTop(section) - offset, 500, () => {
         this.setState({
           isSmoothScrolling: false
         })
-        console.log(this.state)
       }))
     }
   }
@@ -126,14 +125,15 @@ class App extends Component {
     const endY = 0
     const startO = 0
     const endO = 1
+    const startX = 9.3
+    const endX = this.getEndX()
+    const startW = 0
+    const endW = 100
     const nameParams = {stiffness: 150, damping: 25}
     const buttonParams = {stiffness: 75, damping: 18}
     const navParams = {stiffness: 280, damping: 28}
-    const startX = 9.3
-    const endX = this.getEndX()
     return (
       <div className="App">
-        <ContactForm { ...this.state } toggleModal={ this.toggleModal.bind(this) } />
         <nav>
           <Motion defaultStyle={ {x: startX} } style={ {x: spring(endX, navParams)} }>
             {style => <div className="nav-border" style={ {left: style.x} } />}
@@ -143,8 +143,7 @@ class App extends Component {
           <NavLink number={ 1 } section={ this.about } onClick={ this.changeSection.bind(this) } text="About" />
           <NavLink number={ 2 } section={ this.resume } onClick={ this.changeSection.bind(this) } text="Resume" />
           <NavLink number={ 3 } section={ this.projects } onClick={ this.changeSection.bind(this) } text="Projects" />
-          <NavLink number={ 4 } onClick={ this.changeSection.bind(this) } text="Blog" />
-          <NavLink styles={ {marginLeft: 'auto', marginRight: 12, zIndex: 200} } onClick={ this.toggleModal.bind(this) } text="Contact" />
+          { window.innerWidth > 600 && <NavLink styles={ {marginLeft: 'auto', marginRight: 12, zIndex: 200} } onClick={ this.toggleModal.bind(this) } text="Contact" /> }
         </nav>
         <div className="splash" ref={ el => { this.splash = el; } }>
           <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(endY, nameParams), o: spring(endO, nameParams)} }>
@@ -202,8 +201,11 @@ class App extends Component {
             <SectionTitle text="PROJECTS" />
             <Project title="crimemaps.nu" link="www.crimemaps.nu" image={ crimemapsPhoto } />
             <Project title="FIFA 17 Leaderboard" link="javascript:void(0)" image={ sandPhoto } />
+            <Project title="FIFA 17 Leaderboard" link="javascript:void(0)" image={ sandPhoto } />
+            <Project title="FIFA 17 Leaderboard" link="javascript:void(0)" image={ sandPhoto } />
           </div>
         </div>
+        <ContactForm ref={ el => { this.contactForm = el } } { ...this.state } toggleModal={ this.toggleModal.bind(this) } />
       </div>
     )
   }
