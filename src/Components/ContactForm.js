@@ -61,8 +61,12 @@ export default class ContactForm extends Component {
   sendForm() {
     const { name, message, email } = this.state
     const instance = axios.create({
-      baseURL: 'http://rudydeberry.com',
-      timeout: 1000
+      baseURL: 'http://api.rudydeberry.com',
+      timeout: 1000,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: {}
     })
     const data = {
       name,
@@ -71,14 +75,14 @@ export default class ContactForm extends Component {
     }
     instance.post('/messages', data)
     .then(res => {
-      console.log(res)
+      //console.log(res)
       this.setState({isSent: true}, () => {
         setTimeout(() => {
           this.setState({isSent: false})
         }, 500)
       })
     })
-    .catch(err => {console.error(err)})
+    .catch(err => {/*console.error(err)*/})
   }
   handleSubmit() {
     const emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -87,7 +91,6 @@ export default class ContactForm extends Component {
     const nameError = name.length <= 1
     const messageError = message.length <= 1
     const testError = !(+answer === 10)
-    console.log(answer)
     let errors = 0
     errors += emailError ? 1 : 0
     this.setState({

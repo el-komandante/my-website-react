@@ -29,9 +29,6 @@ class App extends Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this))
-    this.setState({
-      h: document.documentElement.scrollHeight
-    })
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll.bind(this))
