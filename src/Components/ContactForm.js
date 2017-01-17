@@ -61,7 +61,7 @@ export default class ContactForm extends Component {
   sendForm() {
     const { name, message, email } = this.state
     const instance = axios.create({
-      baseURL: 'http://192.168.0.108:8080',
+      baseURL: 'http://rudydeberry.com',
       timeout: 1000
     })
     const data = {
@@ -86,7 +86,7 @@ export default class ContactForm extends Component {
     const emailError = !emailTest.test(email)
     const nameError = name.length <= 1
     const messageError = message.length <= 1
-    const testError = !(+answer === 13)
+    const testError = !(+answer === 9)
     let errors = 0
     errors += emailError ? 1 : 0
     this.setState({
@@ -136,7 +136,7 @@ export default class ContactForm extends Component {
                 <TextInput error={ nameError } onChange={ this.handleChange.bind(this) } placeholder="Name" />
                 <TextInput error={ emailError } onChange={ this.handleChange.bind(this) } placeholder="Email" />
                 <TextArea error={ messageError } onChange={ this.handleChange.bind(this) } placeholder="Message" />
-                <TextInput error= { testError } onChange={ this.handleChange.bind(this) } placeholder="Human verification: What's 6 + 7?" />
+                <TextInput error= { testError } onChange={ this.handleChange.bind(this) } placeholder="Human verification: What's 5 + 4?" />
                 <div className="submit-container">
                   <button onClick={ this.handleSubmit.bind(this) } className="submit-button">SUBMIT</button>
                 </div>
