@@ -199,10 +199,7 @@ class App extends Component {
         <div className="projects" ref={ el => { this.projects = el } }>
           <div className="container" style={ {display: 'flex', flexWrap: 'wrap'} }>
             <SectionTitle text="PROJECTS" />
-            <Project title="crimemaps.nu" link="www.crimemaps.nu" image={ crimemapsPhoto } />
-            <Project title="FIFA 17 Leaderboard" link="javascript:void(0)" image={ sandPhoto } />
-            <Project title="FIFA 17 Leaderboard" link="javascript:void(0)" image={ sandPhoto } />
-            <Project title="FIFA 17 Leaderboard" link="javascript:void(0)" image={ sandPhoto } />
+            <Project title="crimemaps.nu" link="http://www.crimemaps.nu" image={ crimemapsPhoto } />
           </div>
         </div>
         <ContactForm ref={ el => { this.contactForm = el } } { ...this.state } toggleModal={ this.toggleModal.bind(this) } />
