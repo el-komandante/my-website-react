@@ -52,7 +52,7 @@ export default class ContactForm extends Component {
           message: value
         })
         break
-      case 'Human verification: What\'s 7 + 3?':
+      case 'Human verification: What\'s 3 + 7?':
         this.setState({
           answer: value
         })
@@ -88,7 +88,6 @@ export default class ContactForm extends Component {
     const messageError = message.length <= 1
     const testError = !(+answer === 10)
     console.log(answer)
-    console.log(testError)
     let errors = 0
     errors += emailError ? 1 : 0
     this.setState({
