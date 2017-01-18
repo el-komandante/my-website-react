@@ -29,9 +29,17 @@ class App extends Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this))
+    document.addEventListener('keydown', this.handleKeyDown.bind(this))
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll.bind(this))
+    document.removeEventListener('keydown', this.handleKeyDown.bind(this))
+  }
+  handleKeyDown(e) {
+    const { isModalOpen } = this.state
+    if (e.keyCode === 27 && isModalOpen) {
+      this.toggleModal()
+    }
   }
   toggleModal() {
     const { isModalOpen, isSmoothScrolling } = this.state

@@ -61,7 +61,7 @@ export default class ContactForm extends Component {
   sendForm() {
     const { name, message, email } = this.state
     const instance = axios.create({
-      baseURL: 'http://api.rudydeberry.com',
+      baseURL: 'https://api.rudydeberry.com',
       timeout: 1000,
       headers: {
         'Content-Type': 'application/json'
