@@ -79,7 +79,7 @@ export default class ContactForm extends Component {
       this.setState({isSent: true}, () => {
         setTimeout(() => {
           this.setState({isSent: false})
-        }, 500)
+        }, 1000)
       })
     })
     .catch(err => {/*console.error(err)*/})
@@ -125,10 +125,10 @@ export default class ContactForm extends Component {
     // const endW = isModalOpen ? 60 : 0
     const inputW = isModalOpen ? 100 : 0
     const sentO = isSent ? 1 : 0
-    const sentW = isSent ? 100 : 0
+    const sentY = isSent ? 0 : 150
     const modalParams = {stiffness: 180, damping: 18}
     const sentWParams = {stiffness: 240, damping: 26}
-    const sentOParams = {stiffness: 275, damping: 28}
+    const sentOParams = {stiffness: 300, damping: 24}
     return (
       <Motion defaultStyle={ {o: startO,/* h: startH, w: startW, */y: startY} } style={ {o: spring(endO, modalParams), /*h: spring(endH, modalParams), w: spring(endW, modalParams), */y: spring(endY, modalParams)} }>
         {style => {
@@ -145,8 +145,8 @@ export default class ContactForm extends Component {
                   <button onClick={ this.handleSubmit.bind(this) } className="submit-button">SUBMIT</button>
                 </div>
               </div>
-              <Motion onRest={ this.handleRest.bind(this) } defaultStyle={ {w: 0, o: startO} } style={ {w: spring(sentW, sentWParams), o: spring(sentO, sentOParams)} }>
-                {style => <div style={ {width: `${style.w}%`, opacity: style.o} } className="message-sent"><h3>Message Sent!</h3></div>}
+              <Motion onRest={ this.handleRest.bind(this) } defaultStyle={ {y: 150, o: startO} } style={ {y: spring(sentY, sentWParams), o: spring(sentO, sentOParams)} }>
+                {style => <div style={ {transform: `translateY(${style.y}px)`, opacity: style.o} } className="message-sent"><h2>Message Sent!</h2></div>}
               </Motion>
             </div>
           )

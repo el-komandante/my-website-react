@@ -130,6 +130,9 @@ h1 {
   margin: 0;
   /*text-decoration: underline;*/
 }
+.name p {
+  font-size: 1.5em;
+}
 .border-button-container {
   padding: 20px;
 }
@@ -559,12 +562,12 @@ textarea:focus, input:focus{
   position: fixed;
   background: white;
   color: black;
-  height: 10%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  height: 18%;
+  width: 60%;
+  display: table;
+  margin-left: -30%;
+  left: 50%;
+  top: 25%;
   border: 4px solid black;
   z-index: 10000;
   display: table;
@@ -572,6 +575,7 @@ textarea:focus, input:focus{
 }
 .message-sent h3 {
   vertical-align: middle;
+  display: table-cell;
 }
 .error {
   border-color: red;

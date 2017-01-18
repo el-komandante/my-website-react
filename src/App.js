@@ -118,7 +118,7 @@ class App extends Component {
   render() {
     const { education, dictybase, lisa, fifa, crimemaps } = resumeItems
     const { languages, tools, interests } = technicalSkills
-    const startY = -150
+    const startY = 150
     const endY = 0
     const startO = 0
     const endO = 1
