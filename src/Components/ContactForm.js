@@ -19,6 +19,9 @@ export default class ContactForm extends Component {
       isSent: false
     }
   }
+  getContainerElement() {
+    return this.container
+  }
   clear() {
     this.
     this.setState({
@@ -133,7 +136,7 @@ export default class ContactForm extends Component {
       <Motion defaultStyle={ {o: startO,/* h: startH, w: startW, */y: startY} } style={ {o: spring(endO, modalParams), /*h: spring(endH, modalParams), w: spring(endW, modalParams), */y: spring(endY, modalParams)} }>
         {style => {
           return (
-            <div className="contact-form-container" style={ {opacity: style.o, height: `${style.h}%`, width: `${style.w}%`, transform: `translateY(${style.y}%)`} }>
+            <div className="contact-form-container" ref={ el => this.container = el } style={ {opacity: style.o, height: `${style.h}%`, width: `${style.w}%`, transform: `translateY(${style.y}%)`} }>
               <a href="javascript:void(0)" className="close-button" onClick={ this.props.toggleModal }><span className="fa fa-2x fa-times" /></a>
               <div className="contact-form">
                 <p className="contact-header">Drop me a line!</p>

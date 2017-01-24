@@ -335,6 +335,9 @@ h1 {
   height: 75%;
   width: 60%;
 }
+.contact-form-container h3 {
+  pointer-events: none;
+}
 .contact-form {
   max-width: 80%;
   display: flex;
@@ -427,9 +430,9 @@ h1 {
   position: relative;
   width: 100%;
   height: 30px;
-  display: table-cell;
   margin: 30px 0px 20px 0px;
   font-size: 1em;
+  display: table;
 }
 .text-input input {
   border: none;
@@ -445,6 +448,7 @@ h1 {
 }
 .text-input label {
   z-index: 1;
+  display: table-cell;
   vertical-align: middle;
   height: 100%;
   color: grey;
@@ -473,7 +477,6 @@ h1 {
   width: 100%;
   height: 40%;
   position: relative;
-  display: table-cell;
   margin: 30px 0px 20px 0px;
 }
 .contact-textarea textarea {
@@ -564,7 +567,6 @@ textarea:focus, input:focus{
   color: black;
   height: 18%;
   width: 60%;
-  display: table;
   margin-left: -30%;
   left: 50%;
   top: 25%;

@@ -35,6 +35,12 @@ class App extends Component {
     window.removeEventListener('scroll', this.handleScroll.bind(this))
     document.removeEventListener('keydown', this.handleKeyDown.bind(this))
   }
+  handleClick(e) {
+    const { isModalOpen } = this.state
+    if (!this.contactForm.getContainerElement().contains(e.target) && isModalOpen) {
+      this.toggleModal()
+    }
+  }
   handleKeyDown(e) {
     const { isModalOpen } = this.state
     if (e.keyCode === 27 && isModalOpen) {
@@ -55,6 +61,7 @@ class App extends Component {
       distance += element.offsetTop
       element = element.offsetParent
     }
+    console.log(distance)
     return distance
   }
   handleScroll(e) {
@@ -138,7 +145,7 @@ class App extends Component {
     const buttonParams = {stiffness: 75, damping: 18}
     const navParams = {stiffness: 280, damping: 28}
     return (
-      <div className="App">
+      <div className="App" onClick={ this.handleClick.bind(this) }>
         <nav>
           <Motion defaultStyle={ {x: startX} } style={ {x: spring(endX, navParams)} }>
             {style => <div className="nav-border" style={ {left: style.x} } />}
