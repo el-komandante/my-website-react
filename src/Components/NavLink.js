@@ -8,7 +8,7 @@ export default class NavLink extends Component {
     const { text, styles } = this.props
     return (
       <div style={ {...styles} } className="nav-link">
-        <a onClick={ this.handleClick.bind(this) } href={ "javascript:void(0)" }>{ text }</a>
+        <a onClick={ this.handleClick.bind(this) } href={ "#" }>{ text }</a>
       </div>
 
     )

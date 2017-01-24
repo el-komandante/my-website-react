@@ -30,6 +30,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this))
     document.addEventListener('keydown', this.handleKeyDown.bind(this))
+    window.scrollBy(0, 2)
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll.bind(this))
@@ -79,22 +80,10 @@ class App extends Component {
     }
     const { currentSection, isSmoothScrolling, scrollDirection } = this.state
     const sections = [
-      {
-        element: this.splash,
-        id: 0
-      },
-      {
-        element: this.about,
-        id: 1
-      },
-      {
-        element: this.resume,
-        id: 2
-      },
-      {
-        element: this.projects,
-        id: 3
-      }
+      {element: this.splash, id: 0},
+      {element: this.about, id: 1},
+      {element: this.resume, id: 2},
+      {element: this.projects,id: 3}
     ]
 
     let element = sections[currentSection].element
