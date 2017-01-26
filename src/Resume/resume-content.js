@@ -45,6 +45,15 @@ export const resumeItems = {
       'Technologies used: React.js, d3.js, Golang, Docker'
     ]
   },
+  liftIt: {
+    name: 'lift.it',
+    years: '2016-Present',
+    title: '',
+    items: [
+      'Created a workout analytics dashboard which allows users to record their activities and dynamically create line charts tracking their performance in cardio/strength training exercises',
+      'Technologies used: Python, Flask, PostgreSQL, chart.js, jQuery, Bootstrap, HTML5/CSS3'
+    ]
+  },
   crimemaps: {
     name: 'crimemaps.nu',
     years: '2016 - Present',
@@ -58,7 +67,7 @@ export const resumeItems = {
 }
 
 export const technicalSkills = {
-  languages: 'Python, JavaScript, C, PostgreSQL, Pandas, Node.js, React, Redux, Express, d3.js, jQuery, HTML5/CSS3',
-  tools: 'Docker, NGINX, Amazon Web Services, GitHub, Bitbucket, Mailchimp API, Adobe Photoshop/Lightroom, Webpack, npm, git',
+  languages: 'Python, JavaScript ES6, C, PostgreSQL, Pandas, Node.js, React, Redux, Express, d3.js, jQuery, HTML5/CSS3',
+  tools: 'Docker, NGINX, Amazon Web Services, GitHub, Bitbucket, Mailchimp API, Mailgun API, AJAX, Salesforce, Adobe Photoshop/Lightroom, Webpack, npm, git, Linux',
   interests: 'DJ Mixing (3 years), Radio (3 years), House music, Photography (5 years), Gaming, Camping, Building PCs'
 }

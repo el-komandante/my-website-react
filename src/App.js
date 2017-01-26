@@ -121,7 +121,7 @@ class App extends Component {
     }
   }
   render() {
-    const { education, dictybase, lisa, weinberg, fifa, crimemaps } = resumeItems
+    const { education, dictybase, lisa, weinberg, fifa, crimemaps, liftIt } = resumeItems
     const { languages, tools, interests } = technicalSkills
     const startY = 150
     const endY = 0
@@ -203,6 +203,7 @@ class App extends Component {
             <ResumeSectionTitle text="PROJECTS" />
             <ResumeSection items={ fifa.items } leftTitle={ fifa.name } rightTitle={ fifa.title } years={ fifa.years} />
             <ResumeSection items={ crimemaps.items } leftTitle={ crimemaps.name } rightTitle={ crimemaps.title } years={ crimemaps.years } />
+            <ResumeSection items={ liftIt.items } leftTitle={ liftIt.name } rightTitle={ liftIt.title } years={ liftIt.years } />
             <ResumeSectionTitle text="TECHNICAL SKILLS" />
             <div className="technical-skills">
               <div className="skills">
