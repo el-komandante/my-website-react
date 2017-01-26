@@ -164,8 +164,12 @@ class App extends Component {
             <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(startO, socialParams), o: spring(endO, socialParams)} }>
               {style => (
                 <div className="social" style={ {transform: `translateY(${style.y}px)`, opacity: style.o} }>
-                  <i className="fa fa-3x fa-linkedin-square" aria-hidden="true"></i>
-                  <i className="fa fa-3x fa-github" aria-hidden="true"></i>
+                  <a href="https://www.linkedin.com/in/charles-deberry-iii-485baba4" target="_blank">
+                    <i className="fa fa-3x fa-linkedin-square" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.github.com/el-komandante" target="_blank">
+                    <i className="fa fa-3x fa-github" aria-hidden="true"></i>
+                  </a>
                 </div>
               )}
             </Motion>
