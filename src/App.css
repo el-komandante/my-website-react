@@ -139,8 +139,8 @@ h1 {
   padding: 20px;
 }
 .border-button {
-  width: 70px;
-  height: 40px;
+  width: 155px;;
+  height: 55px;
   color: white;
   background: transparent;
   transition: all .2s ease;
@@ -153,6 +153,7 @@ h1 {
 .border-button:hover {
   background: white;
   color: black;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
   h1 {

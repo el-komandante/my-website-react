@@ -5,10 +5,10 @@ export default class BorderButton extends Component {
     this.props.onClick(this.props.number, this.props.el)
   }
   render() {
-    const { style, link, text } = this.props
+    const { style, text } = this.props
     return (
       <div style={ style } className="border-button-container">
-        <a href={ link } onClick={ this.handleClick.bind(this) } className="border-button">{ text }</a>
+        <button onClick={ this.handleClick.bind(this) } className="border-button">{ text }</button>
       </div>
     )
   }
