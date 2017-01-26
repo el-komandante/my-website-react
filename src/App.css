@@ -121,6 +121,7 @@ h1 {
   text-align: center;
 }
 .name {
+  padding-top: 30px;
   color: white;
   width: 100%;
   flex-basis: 100%;
