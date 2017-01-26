@@ -131,9 +131,9 @@ class App extends Component {
     const endX = this.getEndX()
     const startW = 0
     const endW = 100
-    const nameParams = {stiffness: 150, damping: 25}
-    const buttonParams = {stiffness: 75, damping: 18}
-    const socialParams = {stiffness: 69, damping: 20}
+    const nameParams = {stiffness: 120, damping: 25}
+    const buttonParams = {stiffness: 100, damping: 22.5}
+    const socialParams = {stiffness: 80, damping: 20}
     const navParams = {stiffness: 280, damping: 28}
     return (
       <div className="App" onClick={ this.handleClick.bind(this) }>
