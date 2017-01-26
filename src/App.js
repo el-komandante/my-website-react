@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion'
 import smoothScroll from 'smoothscroll'
-import logo from './logo.svg'
+// import logo from './logo.svg'
 import profilePhoto from './linkedin-profile.jpg'
 import crimemapsPhoto from './crimemapsnu.png'
-import sandPhoto from './sand.jpg'
+// import sandPhoto from './sand.jpg'
 import './App.css'
 import './css/font-awesome.min.css'
 import NavLink from './Components/NavLink'
@@ -19,7 +19,7 @@ import { resumeItems, technicalSkills } from './Resume/resume-content.js'
 class App extends Component {
   constructor() {
     super()
-    this.state= {
+    this.state = {
       currentSection: 0,
       isSmoothScrolling: false,
       scrollDirection: '',
@@ -30,6 +30,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this))
     document.addEventListener('keydown', this.handleKeyDown.bind(this))
+    //Make sure Navbar fires on first click
     window.scrollBy(0, 2)
   }
   componentWillUnmount() {
@@ -120,7 +121,7 @@ class App extends Component {
     }
   }
   render() {
-    const { education, dictybase, lisa, fifa, crimemaps } = resumeItems
+    const { education, dictybase, lisa, weinberg, fifa, crimemaps } = resumeItems
     const { languages, tools, interests } = technicalSkills
     const startY = 150
     const endY = 0
@@ -132,6 +133,7 @@ class App extends Component {
     const endW = 100
     const nameParams = {stiffness: 150, damping: 25}
     const buttonParams = {stiffness: 75, damping: 18}
+    const socialParams = {stiffness: 69, damping: 20}
     const navParams = {stiffness: 280, damping: 28}
     return (
       <div className="App" onClick={ this.handleClick.bind(this) }>
@@ -146,16 +148,28 @@ class App extends Component {
           <NavLink number={ 3 } section={ this.projects } onClick={ this.changeSection.bind(this) } text="Projects" />
           { window.innerWidth > 600 && <NavLink styles={ {marginLeft: 'auto', marginRight: 12, zIndex: 200} } onClick={ this.toggleModal.bind(this) } text="Contact" /> }
         </nav>
-        <div className="splash" ref={ el => { this.splash = el; } }>
-          <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(endY, nameParams), o: spring(endO, nameParams)} }>
-            {style => <div className="name" style={ {transform: `translateY(${style.y}px)`, opacity: style.o} }><h1>RUDY DEBERRY</h1><p>Software Engineer</p></div>}
-          </Motion>
-          <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(endY, buttonParams), o: spring(endO, buttonParams)} }>
-            {style => <BorderButton style={ {transform: `translateY(${style.y}px)`, opacity: style.o} } link="javascript:void(0)" text={ 'CONTACT' } onClick={ this.toggleModal.bind(this) }/>}
-          </Motion>
-          <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(startO, buttonParams), o: spring(endO, buttonParams)} }>
-            {style => <BorderButton number={ 2 } style={ {transform: `translateY(${style.y}px)`, opacity: style.o} } link="javascript:void(0)" text={ 'RESUME' } onClick={ this.changeSection.bind(this) } el={ this.resume } />}
-          </Motion>
+        <div className="splash" ref={ el => { this.splash = el } }>
+          <div className="container">
+            <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(endY, nameParams), o: spring(endO, nameParams)} }>
+              {style => <div className="name" style={ {transform: `translateY(${style.y}px)`, opacity: style.o} }><h1>RUDY DEBERRY</h1><p>Software Engineer</p></div>}
+            </Motion>
+            <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(endY, buttonParams), o: spring(endO, buttonParams)} }>
+              {style => (
+                <div className="buttons" style={ {transform: `translateY(${style.y}px)`, opacity: style.o} }>
+                  <BorderButton link="#" text={ 'CONTACT' } onClick={ this.toggleModal.bind(this) }/>
+                  <BorderButton number={ 2 } link="#" text={ 'RESUME' } onClick={ this.changeSection.bind(this) } el={ this.resume } />
+                </div>
+              )}
+            </Motion>
+            <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(startO, socialParams), o: spring(endO, socialParams)} }>
+              {style => (
+                <div className="social" style={ {transform: `translateY(${style.y}px)`, opacity: style.o} }>
+                  <i className="fa fa-3x fa-linkedin-square" aria-hidden="true"></i>
+                  <i className="fa fa-3x fa-github" aria-hidden="true"></i>
+                </div>
+              )}
+            </Motion>
+          </div>
         </div>
         <div className="about" ref={ el => { this.about = el } }>
           <div className="container">
@@ -165,9 +179,10 @@ class App extends Component {
               <p>
                 My name is Rudy! I love software development and exploring new web technologies.
                 My main development interests currently lie in frontend development, mainly with React, Redux, and web animation libraries,
-                although I've also begun working on projects with lower level languages like C and Rust. I approach programming with three core values:
-                creativity, functionality, and an overwhelming desire to learn more. I enjoy working as part of a team to create and implement attractive, scalable solutions
-                to complex business problems.
+                although I've also worked on projects using Python. In the near future I hope to gain experience in backend development to
+                complement my frontend skills. I approach software engineering with three core values: creativity, functionality, and an overwhelming
+                desire to keep learning. I enjoy working as part of a team and creating robust, scalable solutions to complex business problems.
+                Feel free to shoot me an email if you'd like to chat.
               </p>
             </div>
           </div>
@@ -180,6 +195,7 @@ class App extends Component {
             <ResumeSectionTitle text="WORK EXPERIENCE" />
             <ResumeSection items={ dictybase.items} leftTitle={ dictybase.name } rightTitle={ dictybase.title } years={ dictybase.years } />
             <ResumeSection items={ lisa.items } leftTitle={ lisa.name } rightTitle={ lisa.title } years={ lisa.years } />
+            <ResumeSection items= { weinberg.items } leftTitle={ weinberg.name } rightTitle={ weinberg.title } years={ weinberg.years } />
             <ResumeSectionTitle text="PROJECTS" />
             <ResumeSection items={ fifa.items } leftTitle={ fifa.name } rightTitle={ fifa.title } years={ fifa.years} />
             <ResumeSection items={ crimemaps.items } leftTitle={ crimemaps.name } rightTitle={ crimemaps.title } years={ crimemaps.years } />

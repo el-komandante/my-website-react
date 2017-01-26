@@ -3,16 +3,17 @@ export const resumeItems = {
     name: 'Northwestern University',
     years: '2013 - 2017',
     title: 'B.S. Communication Studies, Business Institutions Minor',
-    items: ['Communication Technology focus with project-based coursework in Software Engineering, Media Technology, and Consumer Insight']
+    items: ['Communication Technology focus with project-based coursework in Software Engineering, Media Technology, and Cultural Analytics']
   },
   dictybase: {
     name: 'Feinberg School of Medicine - dictyBase',
     years: '2016 - Present',
     title: 'Frontend Engineer',
     items: [
-      'Refactor and update codebase of dictybase.org, a website specializing in research and sale of the organism Dictyostelium discoideum to use ES6, React.js, and a Golang backend',
-      'Build React components and implement Flux architecture using Redux to improve site speed and reliability',
-      'Write documentation and unit tests using Enzyme to ensure continued project maintainability and functionality'
+      'Fully revamp codebase of dictybase.org, a website specializing in research and sale of the organism Dictyostelium discoideum to use ES6, React.js, and a Golang JSON API',
+      'Implement flux architecture using Redux to improve site design, speed, and ease of use',
+      'Write unit tests using Mocha and Enzyme to ensure site longevity and functionality',
+      'Write and maintain project documentation'
     ]
   },
   lisa: {
@@ -25,6 +26,15 @@ export const resumeItems = {
       'Manage Salesforce data to coordinate sales efforts and ensure team awareness of all sales-related communications'
     ]
   },
+  weinberg: {
+    name: 'Weinberg College of Arts and Sciences',
+    years: '2013 - 2015',
+    title: 'Archive Content Specialist',
+    items: [
+      'Managed 6000+ photo, video, and text assets to facilitate efficient access by creative staff, using Extensis Portfolio database software',
+      'Performed quality assurance of University websites to ensure optimal functionality'
+    ]
+  },
   fifa: {
     name: 'FIFA 17 Elo Leaderboard',
     years: '2016 - Present',
@@ -32,7 +42,7 @@ export const resumeItems = {
     items: [
       'Co-developed a leaderboard web app with a React frontend and a Go backend, allowing users to track their match results',
       'Created analytics pages with d3 tracking each player’s Elo rating over time as well as their recent matches',
-      'Technologies used: React.js, d3.js, Golang'
+      'Technologies used: React.js, d3.js, Golang, Docker'
     ]
   },
   crimemaps: {
@@ -48,7 +58,7 @@ export const resumeItems = {
 }
 
 export const technicalSkills = {
-  languages: 'Python, JavaScript, C, Pandas, SQL, Node.js, React.js, Redux, d3.js, jQuery, HTML5/CSS3',
-  tools: 'Salesforce, Mailchimp API, Amazon Web Services S3/Elastic Beanstalk, Adobe Photoshop/Lightroom, Webpack, npm, git',
+  languages: 'Python, JavaScript, C, PostgreSQL, Pandas, Node.js, React, Redux, Express, d3.js, jQuery, HTML5/CSS3',
+  tools: 'Docker, NGINX, Amazon Web Services, GitHub, Bitbucket, Mailchimp API, Adobe Photoshop/Lightroom, Webpack, npm, git',
   interests: 'DJ Mixing (3 years), Radio (3 years), House music, Photography (5 years), Gaming, Camping, Building PCs'
 }
