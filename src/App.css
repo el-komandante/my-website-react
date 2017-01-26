@@ -73,6 +73,9 @@ nav {
   font-weight: 400;
   font-family: inherit;
 }
+.nav-link button:focus {
+  outline: none;
+}
 .nav-link a:visited {
   text-decoration: none;
   color: white;
@@ -104,7 +107,7 @@ h1 {
 .splash {
   background: black;
   /*background-image: url('./splash-background.jpg');*/
-  height: 100vh;
+  height: calc(100vh + 2px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,6 +164,9 @@ h1 {
   background: white;
   color: black;
   cursor: pointer;
+}
+.border-button:focus {
+  outline: none;
 }
 @media screen and (max-width: 600px) {
   h1 {
