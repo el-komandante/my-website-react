@@ -175,17 +175,23 @@ h1 {
   nav {
     font-size: .9em;
     height: 60px;
+    justify-content: center;
   }
   .nav-link {
     border: 2px solid white;
     padding: 4px 4px 4px 4px;
-    width: 60px;
+    margin: 10px 1% 0 1% !important;
+    width: 22%;
     height: 30px;
     margin-top: auto;
     margin-bottom: auto;
   }
+  .nav-link > button {
+    background: none;
+  }
   .border-button {
-    max-width: 75px;
+    min-width: 75px;
+    margin: 0 5px 0 5px;
   }
   .border-button {
     padding: 5px;
