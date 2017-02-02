@@ -306,7 +306,7 @@ h1 {
 .project {
   max-width: 45.5%;;
   max-height: 400px;
-  margin: 2%;
+  margin: 4% 2% 4% 2%;
   position: relative;
   transition: all 1s;
 }
@@ -334,7 +334,7 @@ h1 {
 .project:hover::after {
   content: attr(data-content);
   opacity: 1;
-  transform: translateY(50%);
+  transform: translateY(45%);
 }
 .project-image, .project-video {
   height: 100%;
