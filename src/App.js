@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion'
 import smoothScroll from 'smoothscroll'
 // import logo from './logo.svg'
-import profilePhoto from './linkedin-profile.jpg'
-import crimemapsPhoto from './crimemapsnu.png'
+import profilePhoto from './images/linkedin-profile.jpg'
+import crimemapsPhoto from './images/crimemapsnu.png'
+import fifaApp from './video/fifa.webm'
 // import sandPhoto from './sand.jpg'
 import './App.css'
 import './css/font-awesome.min.css'
@@ -221,7 +222,8 @@ class App extends Component {
         <div className="projects" ref={ el => { this.projects = el } }>
           <div className="container" style={ {display: 'flex', flexWrap: 'wrap'} }>
             <SectionTitle text="PROJECTS" />
-            <Project title="crimemaps.nu" link="http://www.crimemaps.nu" image={ crimemapsPhoto } />
+            <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
+            <Project title="FIFA Leaderobard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
           </div>
         </div>
         <ContactForm ref={ el => { this.contactForm = el } } { ...this.state } toggleModal={ this.toggleModal.bind(this) } />

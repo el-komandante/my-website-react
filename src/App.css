@@ -307,61 +307,49 @@ h1 {
   background: black;
   color: white;
   padding-bottom: 40px;
+  transition: all 0.3s ease;
 }
 .project {
-  width: 50%;
+  max-width: 45.5%;;
+  max-height: 400px;
+  margin: 4% 2% 4% 2%;
+  position: relative;
+  transition: all 1s;
 }
-.project-image {
-    position:relative;
-    /*width:200px;
-    height:200px;*/
+.project::before, .project::after {
+  content: '';
+  cursor: pointer;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
-.project-image img {
-    width: 100%;
-    vertical-align:top;
+.project::after {
+  opacity: 0;
 }
-.project-image figure {
-  margin: 0px;
-  padding: 20px;
+.project:hover::before {
+  background-color: rgba(0,0,0,0.3);
 }
-.project-image:after, .project-image:before {
-    position:absolute;
-    opacity:0;
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-		-moz-transition: all 0.3s ease 0s;
-		-o-transition: all 0.3s ease 0s;
+.project:hover::after {
+  content: attr(data-content);
+  opacity: 1;
+  transform: translateY(45%);
 }
-.project-image:after {
-    content:'\A';
-    width: 100%;
-		height: 100%;
-    top: 0;
-		left: 0;
-    background: rgba(0,0,0,0.4);
+.project-image, .project-video {
+  height: 100%;
+  width: 100%;
 }
-.project-image:before {
-    content: attr(data-content);
-    width: 100%;
-    color: #fff;
-    z-index: 1;
-    bottom: 50%;
-    padding: 4px 10px;
-    text-align: center;
-    background: none;
-    -moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		font-size: 1.3em;
+.project-video {
+  object-fit: fill;
 }
-.project-image:hover:after, .project-image:hover:before {
-    opacity:1;
-}
-@media screen and (max-width: 600px) {
-  .project {
-    width: 100%;
-  }
-}
+
 /*CONTACT FORM*/
 
 .contact-form-container {
