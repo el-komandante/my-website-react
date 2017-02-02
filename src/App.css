@@ -303,70 +303,23 @@ h1 {
   padding-bottom: 40px;
 }
 .project {
-  width: 46%;
-}
-.project-container {
+  max-width: 45.5%;;
+  max-height: 400px;
   padding: 2%;
 }
-.project-image {}
-.project-video {
-  width: 100%;
+/*.project > img .project > video {
   height: 100%;
-}
-.project-image {
-    position:relative;
-    /*width:200px;
-    height:200px;*/
-}
-.project-image img {
-    width:100%;
-    vertical-align:top;
-}
-/*.project-image figure {
-  margin: 0px;
-  padding: 20px;
+  width: 100%;
 }*/
-.project figure {
-  margin: 0px;
+.project-image, .project-video {
+  height: 100%;
+  width: 100%;
 }
-.project-image {}
-.project-image:after, .project-image:before {
-    position:absolute;
-    opacity:0;
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-		-moz-transition: all 0.3s ease 0s;
-		-o-transition: all 0.3s ease 0s;
+.project-video {
+  object-fit: fill;
 }
-.project-image:after {
-    content:'\A';
-    width: 100%;
-		height: 100%;
-    top: 0;
-		left: 0;
-    background: rgba(0,0,0,0.4);
-}
-.project-image:before {
-    content: attr(data-content);
-    width: 100%;
-    color: #fff;
-    z-index: 1;
-    bottom: 50%;
-    padding: 4px 10px;
-    text-align: center;
-    background: none;
-    -moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		font-size: 1.3em;
-}
-.project-image:hover:after, .project-image:hover:before {
-    opacity:1;
-}
-@media screen and (max-width: 600px) {
-  .project {
-    width: 100%;
-  }
+project > video:after, project > img:after {
+
 }
 /*CONTACT FORM*/
 
