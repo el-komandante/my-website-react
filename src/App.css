@@ -301,16 +301,41 @@ h1 {
   background: black;
   color: white;
   padding-bottom: 40px;
+  transition: all 0.3s ease;
 }
 .project {
   max-width: 45.5%;;
   max-height: 400px;
-  padding: 2%;
+  margin: 2%;
+  position: relative;
+  transition: all 1s;
 }
-/*.project > img .project > video {
+.project::before, .project::after {
+  content: '';
+  cursor: pointer;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  position: absolute;
   height: 100%;
   width: 100%;
-}*/
+  z-index: 100;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.project::after {
+  opacity: 0;
+}
+.project:hover::before {
+  background-color: rgba(0,0,0,0.3);
+}
+.project:hover::after {
+  content: attr(data-content);
+  opacity: 1;
+  transform: translateY(50%);
+}
 .project-image, .project-video {
   height: 100%;
   width: 100%;
@@ -318,9 +343,7 @@ h1 {
 .project-video {
   object-fit: fill;
 }
-project > video:after, project > img:after {
 
-}
 /*CONTACT FORM*/
 
 .contact-form-container {
