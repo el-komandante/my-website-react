@@ -36,7 +36,7 @@ export const resumeItems = {
     ]
   },
   fifa: {
-    name: 'FIFA 17 Elo Leaderboard',
+    name: 'FIFA 17 Elo Leaderboard (rudydeberry.com/fifa)',
     years: '2016 - Present',
     title: '',
     items: [
@@ -46,7 +46,7 @@ export const resumeItems = {
     ]
   },
   liftIt: {
-    name: 'lift.it',
+    name: 'lift.it (working title)',
     years: '2016-Present',
     title: '',
     items: [

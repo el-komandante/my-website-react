@@ -223,7 +223,7 @@ class App extends Component {
           <div className="container" style={ {display: 'flex', flexWrap: 'wrap'} }>
             <SectionTitle text="PROJECTS" />
             <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
-            <Project title="FIFA Leaderobard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
+            <Project title="FIFA Leaderboard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
           </div>
         </div>
         <ContactForm ref={ el => { this.contactForm = el } } { ...this.state } toggleModal={ this.toggleModal.bind(this) } />
