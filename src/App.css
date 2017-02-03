@@ -315,6 +315,7 @@ h1 {
   margin: 4% 2% 4% 2%;
   position: relative;
   transition: all 1s;
+  margin-top: 3%;
 }
 .project::before, .project::after {
   content: '';
