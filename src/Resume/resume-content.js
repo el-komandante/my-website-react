@@ -2,7 +2,7 @@ export const resumeItems = {
   education: {
     name: 'Northwestern University',
     years: '2013 - 2017',
-    title: 'B.S. Communication Studies, Business Institutions Minor',
+    title: 'B.S. Communication Studies, Business Institutions Minor Expected 03/17',
     items: ['Communication Technology focus with project-based coursework in Software Engineering, Media Technology, and Cultural Analytics']
   },
   dictybase: {
