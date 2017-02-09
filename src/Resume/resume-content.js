@@ -19,7 +19,7 @@ export const resumeItems = {
   lisa: {
     name: 'The LISA App LLC',
     years: '2016 - Present',
-    title: 'Developer Intern',
+    title: 'Software Developer',
     items: [
       'Design and implement Mailchimp API integration with PostgreSQL database and Node.js backend to automatically update email lists of 5000+ subscribers and notify corporate partners of upcoming events',
       'Create and analyze SQL database reports to provide accurate, actionable information to sales and marketing departments',
