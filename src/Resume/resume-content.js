@@ -36,11 +36,11 @@ export const resumeItems = {
     ]
   },
   fifa: {
-    name: 'FIFA 17 Elo Leaderboard (rudydeberry.com/fifa)',
+    name: 'FIFA 17 Elo Leaderboard',
     years: '2016 - Present',
     title: '',
     items: [
-      'Co-developed a leaderboard web app with a React frontend and a Go backend, allowing users to track their match results',
+      'Co-developed a leaderboard web app with a React frontend and a Go backend, allowing users to track their match results (rudydeberry.com/fifa)',
       'Created analytics pages with d3 tracking each player’s Elo rating over time as well as their recent matches',
       'Technologies used: React.js, d3.js, Golang, Docker'
     ]
