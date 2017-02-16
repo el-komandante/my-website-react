@@ -8,6 +8,7 @@
 .container {
   max-width: 65%;
   margin: 0 auto;
+  
 }
 input, textarea {
   font-family: 'Open Sans', sans-serif;
@@ -50,6 +51,7 @@ nav {
   width: 100%;
   height: 75px;
   z-index: 999;
+  /*opacity: 0.7;*/
 }
 .nav-link {
   padding: 10px;
@@ -309,8 +311,13 @@ h1 {
   padding-bottom: 40px;
   transition: all 0.3s ease;
 }
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .project {
-  max-width: 45.5%;;
+  max-width: 400px;;
   max-height: 400px;
   margin: 4% 2% 4% 2%;
   position: relative;

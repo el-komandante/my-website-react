@@ -220,10 +220,12 @@ class App extends Component {
           </div>
         </div>
         <div className="projects" ref={ el => { this.projects = el } }>
-          <div className="container" style={ {display: 'flex', flexWrap: 'wrap'} }>
-            <SectionTitle text="PROJECTS" />
-            <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
-            <Project title="FIFA Leaderboard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
+          <div className="container" style={ {display: 'flex', flexWrap: 'wrap', justifyContent: 'center'} }>
+            <div className="projects-container">
+              <SectionTitle text="PROJECTS" />
+              <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
+              <Project title="FIFA Leaderboard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
+            </div>
           </div>
         </div>
         <ContactForm ref={ el => { this.contactForm = el } } { ...this.state } toggleModal={ this.toggleModal.bind(this) } />
