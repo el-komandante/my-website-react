@@ -23,7 +23,6 @@ export default class ContactForm extends Component {
     return this.container
   }
   clear() {
-    this.
     this.setState({
       emailError: false,
       nameError: false,
@@ -59,6 +58,9 @@ export default class ContactForm extends Component {
         this.setState({
           answer: value
         })
+        break
+      default:
+        break
     }
   }
   sendForm() {
@@ -126,7 +128,7 @@ export default class ContactForm extends Component {
     // const endH = isModalOpen ? 75 : 0
     // const startW = 0
     // const endW = isModalOpen ? 60 : 0
-    const inputW = isModalOpen ? 100 : 0
+    // const inputW = isModalOpen ? 100 : 0
     const sentO = isSent ? 1 : 0
     const sentY = isSent ? 0 : 150
     const modalParams = {stiffness: 180, damping: 18}
@@ -137,13 +139,13 @@ export default class ContactForm extends Component {
         {style => {
           return (
             <div className="contact-form-container" ref={ el => this.container = el } style={ {opacity: style.o, height: `${style.h}%`, width: `${style.w}%`, transform: `translateY(${style.y}%)`} }>
-              <a href="javascript:void(0)" className="close-button" onClick={ this.props.toggleModal }><span className="fa fa-2x fa-times" /></a>
+              <a href="#" className="close-button" onClick={ this.props.toggleModal }><span className="fa fa-2x fa-times" /></a>
               <div className="contact-form">
                 <p className="contact-header">Drop me a line!</p>
                 <TextInput error={ nameError } onChange={ this.handleChange.bind(this) } placeholder="Name" />
                 <TextInput error={ emailError } onChange={ this.handleChange.bind(this) } placeholder="Email" />
                 <TextArea error={ messageError } onChange={ this.handleChange.bind(this) } placeholder="Message" />
-                <TextInput error= { testError } onChange={ this.handleChange.bind(this) } placeholder="Human verification: What's 3 + 7?" />
+                <TextInput error={ testError } onChange={ this.handleChange.bind(this) } placeholder="Human verification: What's 3 + 7?" />
                 <div className="submit-container">
                   <button onClick={ this.handleSubmit.bind(this) } className="submit-button">SUBMIT</button>
                 </div>

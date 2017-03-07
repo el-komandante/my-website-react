@@ -47,7 +47,7 @@ input, textarea {
 nav {
   display: flex;
   position: fixed;
-  background: black;
+  background: rgba(0,0,0,0.7);
   width: 100%;
   height: 75px;
   z-index: 999;
@@ -343,7 +343,8 @@ h1 {
   margin: auto;
 }
 .project::after {
-  opacity: 0;
+  content: attr(data-content);
+  opacity: 1;
   display: table-cell;
   vertical-align: middle;
 }
@@ -351,11 +352,11 @@ h1 {
   background-color: rgba(0,0,0,0.3);
   height: 100%;
 }
-.project:hover::after {
+/*.project:hover::after {
   content: attr(data-content);
   opacity: 1;
-  /*transform: translateY(45%);*/
-}
+  transform: translateY(45%);
+}*/
 .project-image, .project-video {
   height: 100%;
   width: 100%;

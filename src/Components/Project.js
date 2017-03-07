@@ -7,7 +7,7 @@ export default class Project extends Component {
         <a href={ this.props.link } target="_blank">
           {
             this.props.media === 'image'
-            ? <img className="project-image" src={ this.props.src } />
+            ? <img alt={ this.props.title } className="project-image" src={ this.props.src } />
             : (
                 <video autoPlay loop className="project-video">
                   <source src={ this.props.src } type="video/webm" />
