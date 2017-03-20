@@ -103,7 +103,7 @@ class App extends Component {
   }
   getEndX() {
     const { currentSection } = this.state
-    return 9.3 + (currentSection * 100)
+    return 10 + (currentSection * 100)
   }
   changeSection(sectionId, section) {
     this.setState({
