@@ -88,7 +88,7 @@ class App extends Component {
       {element: this.projects,id: 3}
     ]
 
-    let element = sections[currentSection].element
+    // let element = sections[currentSection].element
     let nextSection = sections[currentSection + 1] && sections[currentSection + 1]
     let prevSection = sections[currentSection - 1] && sections[currentSection - 1]
     if (nextSection && scrollDirection === 'down') {
@@ -130,8 +130,8 @@ class App extends Component {
     const endO = 1
     const startX = 9.3
     const endX = this.getEndX()
-    const startW = 0
-    const endW = 100
+    // const startW = 0
+    // const endW = 100
     const nameParams = {stiffness: 120, damping: 25}
     const buttonParams = {stiffness: 100, damping: 22.5}
     const socialParams = {stiffness: 80, damping: 20}
@@ -183,11 +183,10 @@ class App extends Component {
               <div className="profile-photo-container"><img className="profile-photo" alt="profile" src={ profilePhoto } /></div>
               <p>
                 My name is Rudy! I love software development and exploring new web technologies.
-                My main development interests currently lie in frontend development, mainly with React, Redux, and web animation libraries,
-                although I've also worked on projects using Python. In the near future I hope to gain experience in backend development to
-                complement my frontend skills. I approach software engineering with three core values: creativity, functionality, and an overwhelming
-                desire to keep learning. I enjoy working as part of a team and creating robust, scalable solutions to complex business problems.
-                Feel free to shoot me an email if you'd like to chat.
+                My main development interests currently lie in frontend development, mainly with React, Redux, and web animation libraries
+                although I've also worked on backend projects with Go and Python. I approach software engineering with three core values: creativity,
+                functionality, and an overwhelming desire to keep learning. I enjoy working as part of a team and creating robust, scalable solutions
+                to complex business problems. Shoot me an email if you'd like to chat.
               </p>
             </div>
           </div>
@@ -200,7 +199,7 @@ class App extends Component {
             <ResumeSectionTitle text="WORK EXPERIENCE" />
             <ResumeSection items={ dictybase.items} leftTitle={ dictybase.name } rightTitle={ dictybase.title } years={ dictybase.years } />
             <ResumeSection items={ lisa.items } leftTitle={ lisa.name } rightTitle={ lisa.title } years={ lisa.years } />
-            <ResumeSection items= { weinberg.items } leftTitle={ weinberg.name } rightTitle={ weinberg.title } years={ weinberg.years } />
+            <ResumeSection items={ weinberg.items } leftTitle={ weinberg.name } rightTitle={ weinberg.title } years={ weinberg.years } />
             <ResumeSectionTitle text="PROJECTS" />
             <ResumeSection items={ fifa.items } leftTitle={ fifa.name } rightTitle={ fifa.title } years={ fifa.years} />
             <ResumeSection items={ crimemaps.items } leftTitle={ crimemaps.name } rightTitle={ crimemaps.title } years={ crimemaps.years } />
@@ -220,10 +219,12 @@ class App extends Component {
           </div>
         </div>
         <div className="projects" ref={ el => { this.projects = el } }>
-          <div className="container" style={ {display: 'flex', flexWrap: 'wrap'} }>
-            <SectionTitle text="PROJECTS" />
-            <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
-            <Project title="FIFA Leaderboard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
+          <div className="container" style={ {display: 'flex', flexWrap: 'wrap', justifyContent: 'center'} }>
+            <div className="projects-container">
+              <SectionTitle text="PROJECTS" />
+              <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
+              <Project title="FIFA Leaderboard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
+            </div>
           </div>
         </div>
         <ContactForm ref={ el => { this.contactForm = el } } { ...this.state } toggleModal={ this.toggleModal.bind(this) } />

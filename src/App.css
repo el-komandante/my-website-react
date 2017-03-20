@@ -8,6 +8,7 @@
 .container {
   max-width: 65%;
   margin: 0 auto;
+
 }
 input, textarea {
   font-family: 'Open Sans', sans-serif;
@@ -46,10 +47,11 @@ input, textarea {
 nav {
   display: flex;
   position: fixed;
-  background: black;
+  background: rgba(0,0,0,0.7);
   width: 100%;
   height: 75px;
   z-index: 999;
+  /*opacity: 0.7;*/
 }
 .nav-link {
   padding: 10px;
@@ -67,11 +69,12 @@ nav {
   padding: 10px;
   color: white;
   cursor: pointer;
-  background: black;
+  /*background: black;*/
   border: none;
   font-size: 1em;
   font-weight: 400;
   font-family: inherit;
+  background: transparent;
 }
 .nav-link button:focus {
   outline: none;
@@ -81,7 +84,7 @@ nav {
   color: white;
 }
 .nav-border {
-  border: 2px solid white;
+  border: 1px solid white;
   position: absolute;
   width: 90px;
   height: 44px;
@@ -155,8 +158,8 @@ h1 {
   transition: all .2s ease;
   text-decoration: none;
   vertical-align: middle;
-  border: 2px solid white;
-  padding: 10px 20px 10px 20px;
+  border: 1px solid white;
+  /*padding: 10px 20px 10px 20px;*/
   font-size: 1.5em;
   font-family: inherit;
 }
@@ -178,8 +181,8 @@ h1 {
     justify-content: center;
   }
   .nav-link {
-    border: 2px solid white;
-    padding: 4px 4px 4px 4px;
+    border: 1px solid white;
+    padding: 4px;
     margin: 10px 1% 0 1% !important;
     width: 22%;
     height: 30px;
@@ -309,13 +312,21 @@ h1 {
   padding-bottom: 40px;
   transition: all 0.3s ease;
 }
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .project {
-  max-width: 45.5%;;
+  max-width: 400px;;
   max-height: 400px;
   margin: 4% 2% 4% 2%;
   position: relative;
   transition: all 1s;
   margin-top: 3%;
+  padding: 2%;
+  padding-bottom: 4%;
+  display: table;
 }
 .project::before, .project::after {
   content: '';
@@ -324,7 +335,6 @@ h1 {
   background-color: rgba(0,0,0,0);
   transition: background-color 0.3s ease, opacity 0.3s ease;
   position: absolute;
-  height: 100%;
   width: 100%;
   z-index: 100;
   display: inline-block;
@@ -333,16 +343,20 @@ h1 {
   margin: auto;
 }
 .project::after {
-  opacity: 0;
+  content: attr(data-content);
+  opacity: 1;
+  display: table-cell;
+  vertical-align: middle;
 }
 .project:hover::before {
   background-color: rgba(0,0,0,0.3);
+  height: 100%;
 }
-.project:hover::after {
+/*.project:hover::after {
   content: attr(data-content);
   opacity: 1;
   transform: translateY(45%);
-}
+}*/
 .project-image, .project-video {
   height: 100%;
   width: 100%;
@@ -444,7 +458,7 @@ h1 {
 }
 .submit-button {
   color: black;
-  border: 4px solid black;
+  border: 3px solid black;
   /*height: 10%;*/
   padding: 7px;
   font-size: 1.25em;
