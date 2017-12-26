@@ -5,69 +5,74 @@ export const resumeItems = {
     title: 'B.S. Communication Studies, Business Institutions Minor Expected 03/17',
     items: ['Communication Technology focus with project-based coursework in Software Engineering, Media Technology, and Cultural Analytics']
   },
+  aditazz: {
+    name: 'Aditazz',
+    years: 'July 2017 - December 2017',
+    title: 'Software Engineer',
+    items: [
+      'Architected and implemented an interactive frontend for designing chemical process plants for two of the world’s largest Oil, Gas, and Chemical processing companies',
+      'Used React, Redux, and React-Router to manage complex project state and data flow throughout the application',
+      'Created an interactive 3D interface using Three.js to visualize and modify process plant designs',
+      'Built a drag-and-drop schematic creation tool using SVG and used A* pathfinding to automatically connect onscreen symbols with lines',
+      'Presented live demos for clients and internal stakeholders'
+    ]
+  },
   dictybase: {
     name: 'Feinberg School of Medicine - dictyBase',
-    years: '2016 - Present',
+    years: 'November 2016 - June 2017',
     title: 'Frontend Engineer',
     items: [
-      'Fully revamp codebase of dictybase.org, a website specializing in research and sale of the organism Dictyostelium discoideum to use ES6, React.js, and a Golang JSON API',
-      'Implement flux architecture using Redux to improve site design, speed, and ease of use',
-      'Write unit tests using Mocha and Enzyme to ensure site longevity and functionality',
-      'Write and maintain project documentation'
+      'Revamped codebase of dictybase.org, a website specializing in research and sale of the organism Dictyostelium discoideum to use ES6 JavaScript, React.js, and a Go JSON API',
+      'Implemented Flux architecture using Redux to improve site design, speed, and ease of use',
+      'Built a library of reusable UI components for use throughout the website using styled-components',
+      'Created documentation and wrote unit tests using Mocha and Enzyme to ensure site longevity and functionality'
     ]
   },
   lisa: {
     name: 'The LISA App LLC',
-    years: '2016 - Present',
-    title: 'Software Developer',
+    years: 'June 2016 - February 2017',
+    title: 'Software Engineering Intern',
     items: [
-      'Design and implement Mailchimp API integration with PostgreSQL database and Node.js backend to automatically update email lists of 5000+ subscribers and notify corporate partners of upcoming events',
-      'Create and analyze SQL database reports to provide accurate, actionable information to sales and marketing departments',
-      'Manage Salesforce data to coordinate sales efforts and ensure team awareness of all sales-related communications'
+      'Designed and implemented Mailchimp API integration with PostgreSQL database and Node.js backend to automatically update email lists of 5000+ subscribers and notify corporate partners of upcoming events',
+      'Created and analyzed SQL database reports to provide accurate, actionable information to sales and marketing departments',
+      'Managed Salesforce data to coordinate sales efforts and ensure team awareness of all sales-related communications'
     ]
   },
-  weinberg: {
-    name: 'Weinberg College of Arts and Sciences',
-    years: '2013 - 2015',
-    title: 'Archive Content Specialist',
+  gifRoulette: {
+    name: 'Gif Roulette',
+    years: 'May 2017 - June 2017',
+    title: '',
     items: [
-      'Managed 6000+ photo, video, and text assets to facilitate efficient access by creative staff, using Extensis Portfolio database software',
-      'Performed quality assurance of University websites to ensure optimal functionality'
+      'Created a Reddit web crawler service to extract the top GIFs from any subreddit daily, convert them to a uniform format using the Gfycat API, and store their URLs in a database along with their associated post information',
+      'Built API and frontend services to display a random full screen GIF every time the user pressed the spacebar',
+      'Created and deployed Docker images for all three layers of the application in a Kubernetes cluster on GCP',
+      'Technologies used: Kubernetes, Google Container Engine, Google Compute Engine, Docker, Golang, Gfycat API, Imgur API, PostgreSQL, JavaScript, Google Analytics'
+    ]
+  },
+  goChat: {
+    name: 'GoChat',
+    years: 'February 2017 - March 2017',
+    items: [
+      'Built a backend in Go with user authentication and WebSocket-based real-time chat functionality',
+      'Used React.js to create an effective, visually appealing frontend adherent to Material Design guidelines',
+      'Technologies used: React.js, Go, WebSockets, Material Design'
     ]
   },
   fifa: {
     name: 'FIFA 17 Elo Leaderboard',
-    years: '2016 - Present',
+    years: 'October 2016 - January 2017',
     title: '',
     items: [
       'Co-developed a leaderboard web app with a React frontend and a Go backend, allowing users to track their match results (rudydeberry.com/fifa)',
       'Created analytics pages with d3 tracking each player’s Elo rating over time as well as their recent matches',
       'Technologies used: React.js, d3.js, Golang, Docker'
     ]
-  },
-  liftIt: {
-    name: 'lift.it (working title)',
-    years: '2016-Present',
-    title: '',
-    items: [
-      'Created a workout analytics dashboard which allows users to record their activities and dynamically create line charts tracking their performance in cardio/strength training exercises',
-      'Technologies used: Python, Flask, PostgreSQL, chart.js, jQuery, Bootstrap, HTML5/CSS3'
-    ]
-  },
-  crimemaps: {
-    name: 'crimemaps.nu',
-    years: '2016 - Present',
-    title: '',
-    items: [
-      'Scraped and geocoded crime incident data from Northwestern University police department website',
-      'Visualized yearly incident data using clustered maps, histograms, and bar graphs',
-      'Technologies used: Python (web scraping), Folium (mapping), Plot.ly, OpenCage Geocoder API, HTML5/CSS3'
-    ]
   }
 }
 
 export const technicalSkills = {
-  languages: 'Python, JavaScript ES6, C, PostgreSQL, Pandas, Node.js, React, Redux, Express, d3.js, jQuery, HTML5/CSS3',
-  tools: 'Docker, NGINX, Amazon Web Services, GitHub, Bitbucket, Mailchimp API, Mailgun API, AJAX, Salesforce, Adobe Photoshop/Lightroom, Webpack, npm, git, Linux',
-  interests: 'DJ Mixing (3 years), Radio (3 years), House music, Photography (5 years), Gaming, Camping, Building PCs'
+  languages: 'JavaScript, Python, Golang, Rust, C',
+  tools: 'React.js, Redux, Three.js, SASS, Docker, Kubernetes, Flask, Express, NGINX, Vue.js, d3.js, AWS S3, AWS EC2, Google Container Engine, Google Compute Engine, Flow, WebSockets, Webpack, NPM, git, Jira, GitHub',
+  apis: 'Discogs, Mailchimp, Mailgun, Gfycat, Imgur, YouTube',
+  interests: 'DJ Mixing (6 years), Radio (4 years), Techno, Video Games, Camping, Building PCs'
 }

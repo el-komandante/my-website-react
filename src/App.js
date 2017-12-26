@@ -122,8 +122,8 @@ class App extends Component {
     }
   }
   render() {
-    const { education, dictybase, lisa, weinberg, fifa, crimemaps, liftIt } = resumeItems
-    const { languages, tools, interests } = technicalSkills
+    const { education, dictybase, lisa, weinberg, fifa, aditazz, gifRoulette } = resumeItems
+    const { languages, tools, interests, apis } = technicalSkills
     const startY = 150
     const endY = 0
     const startO = 0
@@ -197,20 +197,22 @@ class App extends Component {
             <ResumeSectionTitle text="EDUCATION" />
             <ResumeSection items={ education.items } leftTitle={ education.name } rightTitle={ education.title } years={ education.years } />
             <ResumeSectionTitle text="WORK EXPERIENCE" />
+            <ResumeSection items={ aditazz.items } leftTitle={ aditazz.name } rightTitle={ aditazz.title } years={ aditazz.years } />
             <ResumeSection items={ dictybase.items} leftTitle={ dictybase.name } rightTitle={ dictybase.title } years={ dictybase.years } />
             <ResumeSection items={ lisa.items } leftTitle={ lisa.name } rightTitle={ lisa.title } years={ lisa.years } />
-            <ResumeSection items={ weinberg.items } leftTitle={ weinberg.name } rightTitle={ weinberg.title } years={ weinberg.years } />
             <ResumeSectionTitle text="PROJECTS" />
+            <ResumeSection items={ gifRoulette.items } leftTitle={ gifRoulette.name } rightTitle={ gifRoulette.title } years={ gifRoulette.years } />
             <ResumeSection items={ fifa.items } leftTitle={ fifa.name } rightTitle={ fifa.title } years={ fifa.years} />
-            <ResumeSection items={ crimemaps.items } leftTitle={ crimemaps.name } rightTitle={ crimemaps.title } years={ crimemaps.years } />
-            <ResumeSection items={ liftIt.items } leftTitle={ liftIt.name } rightTitle={ liftIt.title } years={ liftIt.years } />
             <ResumeSectionTitle text="TECHNICAL SKILLS" />
             <div className="technical-skills">
               <div className="skills">
-                <b>Programming Languages/Libraries: </b>{ languages }
+                <b>Programming Languages: </b>{ languages }
               </div>
               <div className="skills">
-                <b>APIs/Tools: </b>{ tools }
+                <b>Tools: </b>{ tools }
+              </div>
+              <div className="skills">
+                <b>APIs: </b>{ apis }
               </div>
               <div className="skills">
                 <b>Interests: </b>{ interests }
