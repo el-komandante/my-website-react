@@ -2,12 +2,12 @@ export const resumeItems = {
   education: {
     name: 'Northwestern University',
     years: '2013 - 2017',
-    title: 'B.S. Communication Studies, Business Institutions Minor Expected 03/17',
+    title: 'B.S. Communication Studies, Business Institutions Minor',
     items: ['Communication Technology focus with project-based coursework in Software Engineering, Media Technology, and Cultural Analytics']
   },
   aditazz: {
     name: 'Aditazz',
-    years: 'July 2017 - December 2017',
+    years: 'Jul 2017 - Dec 2017',
     title: 'Software Engineer',
     items: [
       'Architected and implemented an interactive frontend for designing chemical process plants for two of the world’s largest Oil, Gas, and Chemical processing companies',
@@ -19,8 +19,8 @@ export const resumeItems = {
   },
   dictybase: {
     name: 'Feinberg School of Medicine - dictyBase',
-    years: 'November 2016 - June 2017',
-    title: 'Frontend Engineer',
+    years: 'Nov 2016 - Jun 2017',
+    title: 'Software Engineer',
     items: [
       'Revamped codebase of dictybase.org, a website specializing in research and sale of the organism Dictyostelium discoideum to use ES6 JavaScript, React.js, and a Go JSON API',
       'Implemented Flux architecture using Redux to improve site design, speed, and ease of use',
@@ -30,7 +30,7 @@ export const resumeItems = {
   },
   lisa: {
     name: 'The LISA App LLC',
-    years: 'June 2016 - February 2017',
+    years: 'Jun 2016 - Feb 2017',
     title: 'Software Engineering Intern',
     items: [
       'Designed and implemented Mailchimp API integration with PostgreSQL database and Node.js backend to automatically update email lists of 5000+ subscribers and notify corporate partners of upcoming events',
@@ -40,8 +40,8 @@ export const resumeItems = {
   },
   gifRoulette: {
     name: 'Gif Roulette',
-    years: 'May 2017 - June 2017',
-    title: '',
+    years: 'May 2017 - Jun 2017',
+    title: 'Gif Roulette Web App',
     items: [
       'Created a Reddit web crawler service to extract the top GIFs from any subreddit daily, convert them to a uniform format using the Gfycat API, and store their URLs in a database along with their associated post information',
       'Built API and frontend services to display a random full screen GIF every time the user pressed the spacebar',
@@ -51,7 +51,8 @@ export const resumeItems = {
   },
   goChat: {
     name: 'GoChat',
-    years: 'February 2017 - March 2017',
+    years: 'Feb 2017 - Mar 2017',
+    title: 'Real-Time Chat Client',
     items: [
       'Built a backend in Go with user authentication and WebSocket-based real-time chat functionality',
       'Used React.js to create an effective, visually appealing frontend adherent to Material Design guidelines',
@@ -59,9 +60,9 @@ export const resumeItems = {
     ]
   },
   fifa: {
-    name: 'FIFA 17 Elo Leaderboard',
-    years: 'October 2016 - January 2017',
-    title: '',
+    name: 'FIFA 17 Leaderboard',
+    years: 'Oct 2016 - Jan 2017',
+    title: 'Online Elo Leaderboard',
     items: [
       'Co-developed a leaderboard web app with a React frontend and a Go backend, allowing users to track their match results (rudydeberry.com/fifa)',
       'Created analytics pages with d3 tracking each player’s Elo rating over time as well as their recent matches',

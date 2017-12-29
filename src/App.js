@@ -122,7 +122,7 @@ class App extends Component {
     }
   }
   render() {
-    const { education, dictybase, lisa, weinberg, fifa, aditazz, gifRoulette } = resumeItems
+    const { education, dictybase, lisa, weinberg, fifa, aditazz, gifRoulette, goChat } = resumeItems
     const { languages, tools, interests, apis } = technicalSkills
     const startY = 150
     const endY = 0
@@ -202,6 +202,7 @@ class App extends Component {
             <ResumeSection items={ lisa.items } leftTitle={ lisa.name } rightTitle={ lisa.title } years={ lisa.years } />
             <ResumeSectionTitle text="PROJECTS" />
             <ResumeSection items={ gifRoulette.items } leftTitle={ gifRoulette.name } rightTitle={ gifRoulette.title } years={ gifRoulette.years } />
+            <ResumeSection items={ goChat.items } leftTitle={ goChat.name } rightTitle={ goChat.title } years={ goChat.years } />
             <ResumeSection items={ fifa.items } leftTitle={ fifa.name } rightTitle={ fifa.title } years={ fifa.years} />
             <ResumeSectionTitle text="TECHNICAL SKILLS" />
             <div className="technical-skills">
@@ -224,7 +225,6 @@ class App extends Component {
           <div className="container" style={ {display: 'flex', flexWrap: 'wrap', justifyContent: 'center'} }>
             <div className="projects-container">
               <SectionTitle text="PROJECTS" />
-              <Project title="crimemaps.nu" link="http://www.crimemaps.nu" src={ crimemapsPhoto } media="image"/>
               <Project title="FIFA Leaderboard" link="https://rudydeberry.com/fifa" src={ fifaApp } media="video"/>
             </div>
           </div>
