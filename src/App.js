@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion'
 import smoothScroll from 'smoothscroll'
-// import logo from './logo.svg'
-import profilePhoto from './images/linkedin-profile.jpg'
-import crimemapsPhoto from './images/crimemapsnu.png'
+import profilePhoto from './images/me-photo.jpg'
 import fifaApp from './video/fifa.webm'
-// import sandPhoto from './sand.jpg'
 import './App.css'
 import './css/font-awesome.min.css'
 import NavLink from './Components/NavLink'
@@ -165,7 +162,7 @@ class App extends Component {
             <Motion defaultStyle={ {y: startY, o: startO} } style={ {y: spring(startO, socialParams), o: spring(endO, socialParams)} }>
               {style => (
                 <div className="social" style={ {transform: `translateY(${style.y}px)`, opacity: style.o} }>
-                  <a href="https://www.linkedin.com/in/charles-deberry-iii-485baba4" target="_blank">
+                  <a href="https://www.linkedin.com/in/charles-rudy-deberry-iii-485baba4/" target="_blank">
                     <i className="fa fa-3x fa-linkedin-square" aria-hidden="true"></i>
                   </a>
                   <a href="https://www.github.com/el-komandante" target="_blank">
@@ -182,11 +179,10 @@ class App extends Component {
             <div className="about-text">
               <div className="profile-photo-container"><img className="profile-photo" alt="profile" src={ profilePhoto } /></div>
               <p>
-                My name is Rudy! I love software development and exploring new web technologies.
-                My main development interests currently lie in frontend development, mainly with React, Redux, and web animation libraries
-                although I've also worked on backend projects with Go and Python. I approach software engineering with three core values: creativity,
-                functionality, and an overwhelming desire to keep learning. I enjoy working as part of a team and creating robust, scalable solutions
-                to complex business problems. Shoot me an email if you'd like to chat.
+                My name is Rudy and I’m a full-stack software engineer with experience developing production user interfaces for a variety of applications.
+                I have backend and deployment experience as well – my preferred stack is a Go backend, React + Redux, and PostgreSQL with NGINX as a webserver
+                and container orchestration using Kubernetes. I approach software engineering with three core values: creativity, functionality, and an overwhelming
+                desire to keep learning. I love working as part of a team to create solutions to challenging problems.
               </p>
             </div>
           </div>
