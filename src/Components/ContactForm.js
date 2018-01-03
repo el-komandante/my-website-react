@@ -28,7 +28,11 @@ export default class ContactForm extends Component {
       nameError: false,
       messageError: false,
       testError: false,
-      isSent: false
+      isSent: false,
+      name: '',
+      email: '',
+      message: '',
+      answer: ''
     })
   }
   handleRest() {
@@ -83,7 +87,7 @@ export default class ContactForm extends Component {
       //console.log(res)
       this.setState({isSent: true}, () => {
         setTimeout(() => {
-          this.setState({isSent: false})
+          this.clear()
         }, 1000)
       })
     })
