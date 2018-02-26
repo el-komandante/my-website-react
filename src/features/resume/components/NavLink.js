@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class NavLink extends Component {
+export default class Link extends Component {
   handleClick() {
     this.props.onClick(this.props.number, this.props.section)
   }

@@ -9,20 +9,24 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
-    "react-scripts": "0.8.4"
+    "react-scripts": "1.1.1"
   },
   "dependencies": {
     "axios": "^0.15.3",
     "mailgun-js": "^0.8.0",
+    "node-sass-chokidar": "^0.0.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-motion": "^0.4.7",
+    "react-router-dom": "^4.2.2",
     "smoothscroll": "^0.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   }
 }
