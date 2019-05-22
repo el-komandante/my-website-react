@@ -61,7 +61,6 @@ class App extends Component {
       distance += element.offsetTop
       element = element.offsetParent
     }
-    console.log(distance)
     return distance
   }
   handleScroll(e) {
