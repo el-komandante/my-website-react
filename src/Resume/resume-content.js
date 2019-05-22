@@ -78,6 +78,7 @@ export const resumeItems = {
     items: [
       'Co-developed a leaderboard web app with a React frontend and a Go backend, allowing users to track their match results (rudydeberry.com/fifa)',
       'Created analytics pages with d3 tracking each player’s Elo rating over time as well as their recent matches',
+      'Used cron to schedule automatic nightlly database backups to AWS S3',
       'Technologies used: React.js, d3.js, Golang, Docker'
     ]
   }
