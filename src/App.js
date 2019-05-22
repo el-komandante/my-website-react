@@ -118,7 +118,7 @@ class App extends Component {
     }
   }
   render() {
-    const { education, dictybase, lisa, weinberg, fifa, aditazz, gifRoulette, goChat } = resumeItems
+    const { education, dictybase, lisa, smartbiz, fifa, aditazz, gifRoulette, goChat } = resumeItems
     const { languages, tools, interests, apis } = technicalSkills
     const startY = 150
     const endY = 0
@@ -192,6 +192,7 @@ class App extends Component {
             <ResumeSectionTitle text="EDUCATION" />
             <ResumeSection items={ education.items } leftTitle={ education.name } rightTitle={ education.title } years={ education.years } />
             <ResumeSectionTitle text="WORK EXPERIENCE" />
+            <ResumeSection items={ smartbiz.items } leftTitle={ smartbiz.name } rightTitle={ smartbiz.title } years={ smartbiz.years } />
             <ResumeSection items={ aditazz.items } leftTitle={ aditazz.name } rightTitle={ aditazz.title } years={ aditazz.years } />
             <ResumeSection items={ dictybase.items} leftTitle={ dictybase.name } rightTitle={ dictybase.title } years={ dictybase.years } />
             <ResumeSection items={ lisa.items } leftTitle={ lisa.name } rightTitle={ lisa.title } years={ lisa.years } />

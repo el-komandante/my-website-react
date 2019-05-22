@@ -5,6 +5,18 @@ export const resumeItems = {
     title: 'B.S. Communication Studies, Business Institutions Minor',
     items: ['Communication Technology focus with project-based coursework in Software Engineering, Media Technology, and Cultural Analytics']
   },
+  smartbiz: {
+    name: 'SmartBiz Loans',
+    years: 'Feb 2017 - Present',
+    title: 'Software Engineer',
+    items: [
+      'Developed financial analysis software for Lending Operations and Sales teams to enable aggregation and analysis of cashflow data from multiple sources including borrower-provided financial documents, tax returns, and IRS tax transcripts',
+      'Worked with product team to translate complex financial business logic into software and automate the manual processes required to successfully and efficiently process a small business loan',
+      'Increased unit test coverage by 30%, covering all new React code as well as legacy Ruby code',
+      'Spearheaded transition from a template-based Rails frontend to React with Apollo GraphQL and styled-components',
+      'Migrated existing Ruby on Rails API endpoints to expose data via GraphQL using graphql-ruby'
+    ]
+  },
   aditazz: {
     name: 'Aditazz',
     years: 'Jul 2017 - Dec 2017',
@@ -72,8 +84,8 @@ export const resumeItems = {
 }
 
 export const technicalSkills = {
-  languages: 'JavaScript, Python, Golang, Rust, C',
-  tools: 'React.js, Redux, Three.js, SASS, Docker, Kubernetes, Flask, Express, NGINX, Vue.js, d3.js, AWS S3, AWS EC2, Google Container Engine, Google Compute Engine, Flow, WebSockets, Webpack, NPM, git, Jira, GitHub',
+  languages: 'JavaScript, Python, Golang, Ruby, Scala',
+  tools: 'React.js, Redux, Apollo, GraphQL, WebSockets, Three.js, SASS, Docker, Kubernetes, Flask, Express, NGINX, Vue.js, d3.js, AWS S3, AWS EC2, Google Container Engine, Google Compute Engine, Flow, Webpack, NPM, Yarn, git, Jira, GitHub',
   apis: 'Discogs, Mailchimp, Mailgun, Gfycat, Imgur, YouTube',
-  interests: 'DJ Mixing (6 years), Radio (4 years), Techno, Video Games, Camping, Building PCs'
+  interests: 'DJ Mixing (6 years), Radio (4 years), Music Production (6 years), Techno, Video Games, Camping, Building PCs'
 }
